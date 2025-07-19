@@ -1,0 +1,27 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
+kind: Template
+metadata:
+  name: edit-component
+  title: Edit Component
+  description: Edits a component's props
+spec:
+  owner: user:guest
+  type: service
+
+  parameters:
+    - title: Fill in some steps
+      required:
+        - description
+      properties:
+        description:
+          title: Description
+          type: string
+          description: Unique name of the component
+          ui:autofocus: true
+        owner:
+          title: Owner
+          ui:field: EntityPicker
+          description: Owner
+          ui:autofocus: true
+  steps: []

@@ -57,6 +57,7 @@ import {
   EntityKubernetesContent,
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
+import { EditComponent } from '../EditComponent/EditComponent';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -220,6 +221,9 @@ const websiteEntityPage = (
 
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
+    </EntityLayout.Route>
+    <EntityLayout.Route path="/edit" title="Edit">
+      <EditComponent />
     </EntityLayout.Route>
   </EntityLayout>
 );
