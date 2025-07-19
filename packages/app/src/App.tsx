@@ -35,6 +35,11 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
+import { DevToolsCustomPage } from './components/DevtoolsCustomPage';
+import { DevToolsPage } from '@backstage/plugin-devtools';
+import catalogUnprocessedEntitiesPlugin, {
+  CatalogUnprocessedEntitiesPage,
+} from '@backstage/plugin-catalog-unprocessed-entities';
 
 const app = createApp({
   apis,
@@ -89,6 +94,13 @@ const routes = (
         </RequirePermission>
       }
     />
+    <Route
+      path="/catalog-unprocessed-entities"
+      element={<CatalogUnprocessedEntitiesPage />}
+    />
+    <Route path="/devtools" element={<DevToolsPage />}>
+      <DevToolsCustomPage />
+    </Route>
     <Route path="/search" element={<SearchPage />}>
       {searchPage}
     </Route>
