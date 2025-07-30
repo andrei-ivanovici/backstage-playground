@@ -123,13 +123,22 @@ yarn tsc
 
 ## Docker
 
-To build and run with Docker:
+The following commands will build a Docker image tagged as `backstage-playground` and run it:
 
 ```bash
-# Build Docker image
-yarn build-image
+# Build Docker image with explicit tag
+docker build -t backstage-playground .
+```
 
-# Run the container (adjust ports as needed)
+Alternatively, you can use the yarn script (but the image name may vary):
+```bash
+# Build Docker image using yarn script
+yarn build-image
+```
+
+Once built, run the container:
+```bash
+# Run the container
 docker run -p 7007:7007 backstage-playground
 ```
 
