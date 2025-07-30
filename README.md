@@ -6,7 +6,7 @@ This is a [Backstage](https://backstage.io) application playground for learning 
 
 Before you begin, ensure you have the following installed on your system:
 
-- **Node.js**: Version 20 or 22 (as specified in package.json)
+- **Node.js**: Version 20 or 22
 - **Yarn**: Version 4.4.1 or later (package manager)
 - **Git**: For version control
 
